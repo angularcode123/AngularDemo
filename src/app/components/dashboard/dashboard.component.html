@@ -1,0 +1,22 @@
+<h2>dashboard</h2>
+
+<h3>Orders</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+        <th>customer</th>
+        <th>orderDate</th>
+        <th>orderDetail</th>
+        <th>orderAmount</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of allOrders">
+            <td>{{order.customer.customerName}}</td>
+            <td>{{order.orderDate | date:'dd-MM-yyyy'}}</td>
+            <td>{{order.orderDetail}}</td>
+            <td>{{order.orderAmount}}</td>
+
+        </tr>
+    </tbody>
+</table>
